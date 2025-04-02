@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias, Deportes y Negocios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        video, audio {
+            display: block;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .noticia, .deporte, .negocio {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <header>
+        <img src="media/el faro foto 2.jpg" alt="Logo del sitio" class="logo">
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#noticias">Noticias</a>
+        <a href="#deportes">Deportes</a>
+        <a href="#negocios">Negocios</a>
+    </nav>
+
+    <!-- Sección de Noticias -->
+    <section id="noticias">
+        <h2>Noticias</h2>
+        <!-- Contenido de las noticias se añadirá aquí desde el script -->
+    </section>
+
+    <!-- Sección de Deportes -->
+    <section id="deportes">
+        <h2>Deportes</h2>
+        <!-- Contenido de los deportes se añadirá aquí desde el script -->
+    </section>
+
+    <!-- Sección de Negocios -->
+    <section id="negocios">
+        <h2>Negocios</h2>
+        <!-- Contenido de los negocios se añadirá aquí desde el script -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Noticias, Deportes y Negocios. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Datos de ejemplo para las tres secciones
+        const noticias = [
+            {
+                titulo: "Guillermo Ramírez La gente siente que el gobierno se las va a llevar pelá",
+                categoria: "Política",
+                contenido: "El diputado Guillermo Ramírez, Cristián Rodríguez, y Cecilia Cifuentes se refieren a las irregularidades en el traspaso de fondos a fundaciones desde ministerios. El diputado Ramírez dice que nadie ha asumido la responsabilidad política y que la oposición no se quedará como si nada pasara..",
+                video: "media/video_noticia1.mp4",
+                audio: "media/audio_noticia1.mp3"
+            },
+            {
+                titulo: "El cambio climático pone en riesgo las cosechas en Chile",
+                categoria: "Medioambiente",
+                contenido: "Las altas temperaturas y la falta de lluvias afectan la producción agrícola en diversas regiones del país.En una nueva edición de CNN Tiempo, con José Miguel Mardones revisamos, junto al docente de agroclimatología de la Universidad de Talca, Patricio González, los efectos que produce el cambio en Chile y las consecuencias que tiene sobre la agricultura nacional. Más información en CNN Chile: https://www.cnnchile.com",
+                video: "media/video_noticia2.mp4",
+                audio: "media/audio_noticia2.mp3"
+            },
+            {
+                titulo: "Nuevo acuerdo comercial entre Chile y la Unión Europea",
+                categoria: "Economía",
+                contenido: "Chile firmó un acuerdo que abre nuevas oportunidades comerciales con la Unión Europea, potenciando las exportaciones.A partir del Sábado 1 de Febrero, toda la relación comercial entre Chile y la Unión Europea se regirá por el Acuerdo Interino Comercial, tras su aprobación en el Parlamento Europeo y en el Congreso chileno. El Acuerdo Interino Comercial, incluye nuevas disposiciones que regirán en el comercio de bienes, servicios y liberalización de inversiones entre ambas partes . Entre los principales cambios del Acuerdo Interino Comercial, respecto a su antecesor, están que se expandirá el porcentaje de productos chilenos cubiertos por alguna rebaja arancelaria por parte de la Unión Europea desde un 94,7% a un 99,6% de las líneas arancelarias, representando casi la totalidad de las exportaciones chilenas a dicho mercado. Entre los productos con mejoras destacan: el vino, el cobre; litio, hidrogeno verde y el salmón, entre otros. Además, la UE reconocerá en el mercado europeo todas las indicaciones geográficas y denominaciones de origen reconocidas de Chile, dándoles exclusividad para distinguirse en este mercado. Chile hará lo propio con las europeas. En cuanto a servicios, permitirá que los prestadores nacionales reciban un tratamiento casi al nivel de un prestador de servicios europeo, lo que impactará positivamente en las exportaciones en la materia.",
+                video: "media/video_noticia3.mp4",
+                audio: "media/audio_noticia3.mp3"
+            }
+        ];
+
+        const deportes = [
+            {
+                titulo: "¡Un MONSTRUO DE FÚTBOL de 11 años del REAL MADRID que marca más de 60 goles por temporada!",
+                categoria: "Deportes",
+                contenido: "Juega como Ozil, dribla como Messi, gira como Modric, engaña como Neymar y define como Ronaldo! Conozcan a Hugo Fernández, el joven talento del Real Madrid que maravillará al mundo entero! ¡Nunca han visto a alguien como él y ahora les vamos a mostrar por qué este chico es el futuro del fútbol, Hugo Fernández Martín es un mediocampista central zurdo de 11 años del equipo juvenil del Real Madrid que brilla en el equipo U11 “Alevín B”. En Valdebebas, donde se encuentra el campo de entrenamiento del Real Madrid, llamado La Fábrica, afirman que Hugo es el mejor joven jugador de toda la academia Merengue.",
+                video: "media/video_deporte1.mp4",
+                audio: "media/audio_deporte1.mp3"
+            },
+            {
+                titulo: "Chile casi sin mundial: Empate a 0 con Ecuador aleja aún más a La Roja del próximo torneo",
+                categoria: "Fútbol",
+                contenido: "La selección chilena empató sin goles con Ecuador y complicó aún más su participación en el próximo mundial, manteniéndose último en la tabla.",
+                video: "media/video_deporte2.mp4",
+                audio: "media/audio_deporte2.mp3"
+            },
+            {
+                titulo: "Victoria histórica de la selección femenina de rugby",
+                categoria: "Rugby",
+                contenido: "El equipo femenino de rugby de Chile gana su primer torneo internacional, un hito para el deporte nacional.",
+                video: "media/video_deporte3.mp4",
+                audio: "media/audio_deporte3.mp3"
+            }
+        ];
+
+        const negocios = [
+            {
+                titulo: "Fiscalía expone caso de Ronald Ojeda ante Corte Penal Internacional de La Haya ",
+                categoria: "Negocios",
+                contenido: "Chile se reúne con funcionarios de la CPI para abordar el asesinato de un disidente venezolano, mostrando compromiso con la justicia internacional. Crimen por encargo, motivaciones políticas y la posibilidad de colaborar mutuamente en la investigación por el caso del ex teniente Ronald Ojeda, es lo que plantearon en La Haya el Fiscal Nacional Ángel Valencia y el canciller chileno Alberto van Klaveren. Las autoridades entregaron los antecedentes por la investigación que lleva adelante el organismo contra Venezuela, por crímenes de lesa humanidad.",
+                video: "media/video_negocio1.mp4",
+                audio: "media/audio_negocio1.mp3"
+            },
+            {
+                titulo: "Las criptomonedas como alternativa para negocios emergentes",
+                categoria: "Finanzas",
+                contenido: "Empresas en Chile exploran el uso de criptomonedas para aumentar su competitividad en mercados internacionales.",
+                video: "media/video_negocio2.mp4",
+                audio: "media/audio_negocio2.mp3"
+            },
+            {
+                titulo: "Inversión extranjera en Chile alcanza niveles récord",
+                categoria: "Economía",
+                contenido: "El país atrae inversiones de grandes corporaciones internacionales en el sector tecnológico y de energía renovable. La Secretaria ejecutiva del organismo, Alicia Bárcena, ahondó sobre el informe de inversión extranjera directa en América Latina y el Caribe que detalla los flujos de capital a la región y que hace una proyección para.",
+                video: "media/video_negocio3.mp4",
+                audio: "media/audio_negocio3.mp3"
+            }
+        ];
+
+        // Función para agregar contenido a la sección de Noticias
+        function cargarNoticias() {
+            const noticiasContainer = document.getElementById("noticias");
+            noticias.forEach(noticia => {
+                const noticiaElement = document.createElement("div");
+                noticiaElement.classList.add("noticia");
+                noticiaElement.innerHTML = `
+                    <h3>${noticia.titulo}</h3>
+                    <p><strong>Categoría:</strong> ${noticia.categoria}</p>
+                    <p>${noticia.contenido}</p>
+                    <video controls>
+                        <source src="${noticia.video}" type="video/mp4">
+                        Tu navegador no soporta este formato de video.
+                    </video>
+                    <audio controls>
+                        <source src="${noticia.audio}" type="audio/mp3">
+                        Tu navegador no soporta este formato de audio.
+                    </audio>
+                `;
+                noticiasContainer.appendChild(noticiaElement);
+            });
+        }
+
+        // Función para agregar contenido a la sección de Deportes
+        function cargarDeportes() {
+            const deportesContainer = document.getElementById("deportes");
+            deportes.forEach(deporte => {
+                const deporteElement = document.createElement("div");
+                deporteElement.classList.add("deporte");
+                deporteElement.innerHTML = `
+                    <h3>${deporte.titulo}</h3>
+                    <p><strong>Categoría:</strong> ${deporte.categoria}</p>
+                    <p>${deporte.contenido}</p>
+                    <video controls>
+                        <source src="${deporte.video}" type="video/mp4">
+                        Tu navegador no soporta este formato de video.
+                    </video>
+                    <audio controls>
+                        <source src="${deporte.audio}" type="audio/mp3">
+                        Tu navegador no soporta este formato de audio.
+                    </audio>
+                `;
+                deportesContainer.appendChild(deporteElement);
+            });
+        }
+
+        // Función para agregar contenido a la sección de Negocios
+        function cargarNegocios() {
+            const negociosContainer = document.getElementById("negocios");
+            negocios.forEach(negocio => {
+                const negocioElement = document.createElement("div");
+                negocioElement.classList.add("negocio");
+                negocioElement.innerHTML = `
+                    <h3>${negocio.titulo}</h3>
+                    <p><strong>Categoría:</strong> ${negocio.categoria}</p>
+                    <p>${negocio.contenido}</p>
+                    <video controls>
+                        <source src="${negocio.video}" type="video/mp4">
+                        Tu navegador no soporta este formato de video.
+                    </video>
+                    <audio controls>
+                        <source src="${negocio.audio}" type="audio/mp3">
+                        Tu navegador no soporta este formato de audio.
+                    </audio>
+                `;
+                negociosContainer.appendChild(negocioElement);
+            });
+        }
+
+        // Llamamos a las funciones para cargar el contenido
+        cargarNoticias();
+        cargarDeportes();
+        cargarNegocios();
+    </script>
+
+</body>
+</html>
