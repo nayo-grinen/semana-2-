@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Faro - Noticias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+    #reloj {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .articulo {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .articulo:hover {
+      background-color: black;
+      color: white;
+    }
+    .articulo video, .articulo audio {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .articulo.destacada {
+      background-color: #dbeafe;
+      border-left: 4px solid #004080;
+    }
+    .articulo.destacada:hover {
+      background-color: #1e40af;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero is-link">
+  <div class="hero-body has-text-centered">
+    <img src="media/el faro foto 2.jpg" alt="Logo El Faro" style="max-width: 150px;" />
+    <h1 class="title has-text-white">Periódico El Faro</h1>
+    <div id="reloj" class="has-text-white"></div>
+  </div>
+</section>
+
+<nav class="navbar is-dark">
+  <div class="navbar-menu is-active">
+    <div class="navbar-start">
+      <a class="navbar-item" href="#noticias">Noticias</a>
+      <a class="navbar-item" href="#deportes">Deportes</a>
+      <a class="navbar-item" href="#negocios">Negocios</a>
+    </div>
+  </div>
+</nav>
+
+<section class="section pt-4 pb-0">
+  <div class="notification is-primary has-text-centered has-text-weight-bold is-size-5">
+    <span style="font-size: 1.5em;">📢</span>
+    ¡Bienvenido a la nueva versión de <strong>El Faro</strong>! Disfruta nuestras <u>noticias destacadas</u>.
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Agregar nuevo artículo</h2>
+    <form id="formulario-articulo">
+      <div class="field"><div class="control">
+        <input class="input" id="titulo" type="text" placeholder="Título del artículo" required>
+      </div></div>
+      <div class="field"><div class="control">
+        <textarea class="textarea" id="descripcion" placeholder="Descripción del artículo" required></textarea>
+      </div></div>
+      <div class="field"><div class="control">
+        <div class="select">
+          <select id="seccion" required>
+            <option value="">Selecciona sección</option>
+            <option value="noticias">Noticias</option>
+            <option value="deportes">Deportes</option>
+            <option value="negocios">Negocios</option>
+          </select>
+        </div>
+      </div></div>
+      <div class="control">
+        <button class="button is-link" type="submit">Agregar artículo</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="noticias">
+  <div class="container">
+    <h2 class="title is-4">Noticias (<span class="tag is-info contador" data-seccion="noticias">3</span>)</h2>
+    <div class="columns is-multiline" id="contenedor-noticias">
+      <div class="column is-one-third">
+        <div class="articulo destacada">
+          <h3 class="title is-4">🏅 Guillermo Ramírez: El gobierno se las va a llevar pelá</h3>
+          <p>Irregularidades en traspaso de fondos, nadie asume responsabilidades.</p>
+          <video controls><source src="media/video_noticia1.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_noticia1.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="articulo">
+          <h3 class="title is-5">Riesgo para las cosechas por cambio climático</h3>
+          <p>Altas temperaturas y sequía afectan producción agrícola.</p>
+          <video controls><source src="media/video_noticia2.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_noticia2.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="articulo">
+          <h3 class="title is-5">Acuerdo comercial Chile-UE</h3>
+          <p>Se expanden beneficios arancelarios y reconocimiento de productos.</p>
+          <video controls><source src="media/video_noticia3.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_noticia3.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="deportes">
+  <div class="container">
+    <h2 class="title is-4">Deportes (<span class="tag is-info contador" data-seccion="deportes">3</span>)</h2>
+    <div class="columns is-multiline" id="contenedor-deportes">
+      <div class="column is-one-third">
+        <div class="articulo destacada">
+          <h3 class="title is-4">🏅 Promesa del Real Madrid</h3>
+          <p>Hugo Fernández deslumbra con más de 60 goles en categoría U11.</p>
+          <video controls><source src="media/video_deporte1.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_deporte1.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="articulo">
+          <h3 class="title is-5">Chile complica su paso al mundial</h3>
+          <p>Empate sin goles frente a Ecuador deja a La Roja en el fondo de la tabla.</p>
+          <video controls><source src="media/video_deporte2.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_deporte2.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="articulo">
+          <h3 class="title is-5">Triunfo histórico en rugby femenino</h3>
+          <p>Chile gana su primer torneo internacional en esta categoría.</p>
+          <video controls><source src="media/video_deporte3.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_deporte3.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="negocios">
+  <div class="container">
+    <h2 class="title is-4">Negocios (<span class="tag is-info contador" data-seccion="negocios">3</span>)</h2>
+    <div class="columns is-multiline" id="contenedor-negocios">
+      <div class="column is-one-third">
+        <div class="articulo destacada">
+          <h3 class="title is-4">🏅 Caso Ronald Ojeda ante la CPI</h3>
+          <p>Chile presenta el caso ante la Corte Penal Internacional de La Haya.</p>
+          <video controls><source src="media/video_negocio1.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_negocio1.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="articulo">
+          <h3 class="title is-5">Criptomonedas ganan terreno</h3>
+          <p>Empresas chilenas exploran el uso de cripto para expansión internacional.</p>
+          <video controls><source src="media/video_negocio2.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_negocio2.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="articulo">
+          <h3 class="title is-5">Inversión extranjera récord en Chile</h3>
+          <p>Corporaciones invierten en tecnología y energías limpias.</p>
+          <video controls><source src="media/video_negocio3.mp4" type="video/mp4"></video>
+          <audio controls><source src="media/audio_negocio3.mp3" type="audio/mp3"></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Contacto</h2>
+    <form id="formulario-contacto">
+      <div class="field"><div class="control">
+        <input class="input" type="text" placeholder="Tu nombre" required>
+      </div></div>
+      <div class="field"><div class="control">
+        <textarea class="textarea" placeholder="Tu mensaje" required></textarea>
+      </div></div>
+      <div class="control">
+        <button class="button is-link" type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer has-background-light has-text-centered">
+  <p>&copy; 2025 El Faro - Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  function actualizarReloj() {
+    const ahora = new Date();
+    document.getElementById('reloj').textContent =
+      ahora.toLocaleDateString() + ' - ' + ahora.toLocaleTimeString();
+  }
+  setInterval(actualizarReloj, 1000);
+  actualizarReloj();
+
+  const articulos = { noticias: 3, deportes: 3, negocios: 3 };
+
+  function actualizarContadores() {
+    document.querySelectorAll('.contador').forEach(el => {
+      const sec = el.dataset.seccion;
+      el.textContent = articulos[sec];
+    });
+  }
+
+  function mostrarArticulo(sec, art) {
+    const cont = document.getElementById('contenedor-' + sec);
+    const col = document.createElement('div');
+    col.className = 'column is-one-third';
+    col.innerHTML = `
+      <div class="articulo box">
+        <h3 class="title is-5">${art.titulo}</h3>
+        <p>${art.descripcion}</p>
+      </div>`;
+    cont.appendChild(col);
+  }
+
+  document.getElementById('formulario-articulo').addEventListener('submit', e => {
+    e.preventDefault();
+    const titulo = document.getElementById('titulo').value;
+    const descripcion = document.getElementById('descripcion').value;
+    const seccion = document.getElementById('seccion').value;
+    mostrarArticulo(seccion, { titulo, descripcion });
+    articulos[seccion]++;
+    actualizarContadores();
+    e.target.reset();
+  });
+
+  document.getElementById('formulario-contacto').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Mensaje enviado correctamente.');
+    e.target.reset();
+  });
+
+  actualizarContadores();
+</script>
+
+</body>
+</html>
